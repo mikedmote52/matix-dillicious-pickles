@@ -24,20 +24,28 @@ export function PickleBossAcademy() {
             Each lesson turns a real business idea into something a young founder can see, count, and explain.
           </p>
         </div>
-        <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {siteConfig.academyLessons.map((lesson) => (
-            <article key={lesson.id} className="grid grid-cols-[88px_1fr] gap-4 rounded-3xl bg-white p-4 shadow-sm">
-              <MascotArt variant={mascotVariant[lesson.mascotId as keyof typeof mascotVariant]} className="w-22" />
-              <div>
-                <h3 className="text-xl font-black text-green-950">{lesson.title}</h3>
-                <p className="mt-1 text-sm leading-6 text-green-950/70">{lesson.simpleDefinition}</p>
-                <p className="mt-3 rounded-2xl bg-[#fffaf0] p-3 text-sm font-black text-green-900">{lesson.example}</p>
-              </div>
-            </article>
-          ))}
+        <div className="mt-8 grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+          <div className="overflow-hidden rounded-[2rem] border-4 border-white bg-[#fffaf0] shadow-[0_10px_0_#7ea850]">
+            <img
+              src="/assets/pickle-business-plan-board.jpg"
+              alt="Cartoon pickle business plan board with blank panels, Matix, pickle mascots, jars, coins, and garden icons"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="grid gap-4 md:grid-cols-2">
+            {siteConfig.academyLessons.map((lesson) => (
+              <article key={lesson.id} className="grid grid-cols-[88px_1fr] gap-4 rounded-3xl bg-white p-4 shadow-sm">
+                <MascotArt variant={mascotVariant[lesson.mascotId as keyof typeof mascotVariant]} className="w-22" />
+                <div>
+                  <h3 className="text-xl font-black text-green-950">{lesson.title}</h3>
+                  <p className="mt-1 text-sm leading-6 text-green-950/70">{lesson.simpleDefinition}</p>
+                  <p className="mt-3 rounded-2xl bg-[#fffaf0] p-3 text-sm font-black text-green-900">{lesson.example}</p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
   );
 }
-

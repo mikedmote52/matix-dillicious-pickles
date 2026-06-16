@@ -24,17 +24,13 @@ export function AboutMatix() {
   return (
     <section id="meet" className="bg-[#f5ffe8] px-4 py-16">
       <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-[0.9fr_1.1fr]">
-        <div className="relative min-h-72 rounded-[2rem] bg-[#9ed8ec] p-6 shadow-[0_10px_0_#4d9db8]">
-          <div className="absolute inset-x-8 bottom-8 h-20 rounded-full bg-[#5ea62d]" />
-          <div className="absolute left-1/2 top-8 h-52 w-40 -translate-x-1/2 rounded-[45%_45%_34%_34%] bg-[#ffd861]">
-            <div className="absolute left-1/2 top-5 h-20 w-24 -translate-x-1/2 rounded-full bg-[#f5c78e]" />
-            <div className="absolute left-1/2 top-4 h-11 w-32 -translate-x-1/2 rounded-full bg-[#b98243]" />
-            <div className="absolute left-[42%] top-[74px] h-2.5 w-2.5 rounded-full bg-green-950" />
-            <div className="absolute right-[42%] top-[74px] h-2.5 w-2.5 rounded-full bg-green-950" />
-            <div className="absolute left-1/2 top-24 h-7 w-16 -translate-x-1/2 rounded-b-full border-b-4 border-green-950" />
-            <div className="absolute bottom-10 left-1/2 h-24 w-28 -translate-x-1/2 rounded-3xl bg-[#4aa0f0]" />
-          </div>
-          <MascotArt variant="dillbert" className="absolute bottom-2 right-4 w-28" />
+        <div className="relative overflow-hidden rounded-[2rem] bg-[#9ed8ec] p-3 shadow-[0_10px_0_#4d9db8]">
+          <img
+            src="/assets/matix-founder-card.jpg"
+            alt="Cartoon portrait of Matix smiling with a pickle jar and two pickle sidekicks"
+            className="h-full max-h-[560px] w-full rounded-[1.5rem] object-cover object-top"
+          />
+          <MascotArt variant="dillbert" className="absolute bottom-1 right-2 w-24 drop-shadow-xl" />
         </div>
         <div>
           <p className="text-sm font-black uppercase tracking-[0.18em] text-green-700">Meet the founder</p>
@@ -56,4 +52,3 @@ export function AboutMatix() {
     </section>
   );
 }
-

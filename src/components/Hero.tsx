@@ -50,31 +50,27 @@ export function Hero() {
         </div>
         <div className="relative min-h-[430px]">
           <motion.div
-            animate={reduceMotion ? undefined : { y: [0, -12, 0], rotate: [-1, 1, -1] }}
+            animate={reduceMotion ? undefined : { y: [0, -8, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute left-1/2 top-0 h-72 w-56 -translate-x-1/2 rounded-[44%_44%_36%_36%] bg-[#ffd861] shadow-2xl sm:h-80 sm:w-64"
+            className="overflow-hidden rounded-[2rem] border-4 border-white bg-[#d8f66d] shadow-2xl"
           >
-            <div className="absolute left-1/2 top-7 h-24 w-28 -translate-x-1/2 rounded-[50%] bg-[#f5c78e]" />
-            <div className="absolute left-1/2 top-5 h-14 w-36 -translate-x-1/2 rounded-[50%_50%_40%_40%] bg-[#b98243]" />
-            <div className="absolute left-[42%] top-20 h-3 w-3 rounded-full bg-green-950" />
-            <div className="absolute right-[42%] top-20 h-3 w-3 rounded-full bg-green-950" />
-            <div className="absolute left-1/2 top-32 h-32 w-36 -translate-x-1/2 rounded-3xl bg-[#4aa0f0]" />
-            <div className="absolute left-1/2 top-27 h-8 w-20 -translate-x-1/2 rounded-b-full border-b-4 border-green-950" />
-            <div className="absolute left-1/2 top-56 -translate-x-1/2 rounded-full bg-white px-4 py-2 text-center text-xs font-black text-green-950 shadow">
-              Chief Pickle Officer
-            </div>
+            <img
+              src="/assets/matix-pickle-crew-hero.jpg"
+              alt="Cartoon Matix holding a pickle jar with Pickle Pup and cheerful pickle mascots in a cucumber garden"
+              className="aspect-[1.35/1] h-full w-full object-cover object-center"
+            />
           </motion.div>
           <motion.div
             animate={reduceMotion ? undefined : { rotate: [0, 4, -3, 0], y: [0, 5, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute bottom-8 left-0 w-40 sm:w-52"
+            className="absolute -bottom-6 left-0 hidden w-32 sm:block"
           >
             <MascotArt variant="captain" />
           </motion.div>
           <motion.div
             animate={reduceMotion ? undefined : { x: [0, 10, 0] }}
             transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute bottom-0 right-0 w-44 sm:w-56"
+            className="absolute -bottom-8 right-0 hidden w-36 sm:block"
           >
             <MascotArt variant="pup" />
           </motion.div>
@@ -84,4 +80,3 @@ export function Hero() {
     </section>
   );
 }
-

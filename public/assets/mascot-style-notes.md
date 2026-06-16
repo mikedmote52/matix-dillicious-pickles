@@ -11,3 +11,10 @@ Reference assets:
 
 The source photos are not imported into the public app. If Mike later approves public photo use, add resized copies to `public/assets/` and document where they appear.
 
+Generated public artwork:
+
+- `matix-pickle-crew-hero.jpg`: wide hero illustration with Matix, Pickle Pup, pickle mascots, jars, and cucumber garden.
+- `matix-founder-card.jpg`: portrait card of Matix holding a jar.
+- `pickle-business-plan-board.jpg`: blank-panel business plan board used beside Pickle Boss Academy lessons.
+
+The generated images intentionally avoid readable text so site copy remains editable, accessible, and accurate in HTML.
