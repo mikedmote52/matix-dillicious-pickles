@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --font-rounded: "Nunito", "Avenir Next", "Trebuchet MS", system-ui, sans-serif;
+  --warm-white: #fffaf0;
+  --pickle-green: #5ea62d;
+  --cucumber-green: #9edc72;
+  --lime-green: #d8f66d;
+  --sunshine-yellow: #ffd861;
+  --jar-blue: #9ed8ec;
+  --orange: #ff9b45;
+  --sky-blue: #76c7f2;
+  --purple: #b89cf5;
+  --ink: #1e2a1b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--warm-white);
+  color: var(--ink);
+  font-family: var(--font-rounded);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
