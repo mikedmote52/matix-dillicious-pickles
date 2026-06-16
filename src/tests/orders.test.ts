@@ -90,3 +90,29 @@ test("sends order email through Resend when adult email env vars are configured"
     globalThis.fetch = originalFetch;
   }
 });
+
+test("refuses production submissions when adult email env vars are missing", async () => {
+  const originalEnv = { ...process.env };
+
+  delete process.env.ORDER_TO_EMAIL;
+  delete process.env.ORDER_FROM_EMAIL;
+  delete process.env.RESEND_API_KEY;
+  process.env.VERCEL = "1";
+
+  try {
+    await assert.rejects(
+      () =>
+        submitOrderRequest({
+          name: "Aunt Sarah",
+          email: "sarah@example.com",
+          phone: "",
+          quantity: 2,
+          flavor: "Classic Dill",
+          notes: ""
+        }),
+      /Order email is not configured/
+    );
+  } finally {
+    process.env = originalEnv;
+  }
+});

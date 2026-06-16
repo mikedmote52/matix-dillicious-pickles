@@ -81,8 +81,9 @@ export function validateOrderRequest(input: OrderRequestInput): OrderValidationR
 
 export async function submitOrderRequest(order: OrderRequest): Promise<OrderSubmissionResult> {
   const reference = `pickle-${Date.now()}`;
+  const hasEmailConfig = Boolean(process.env.ORDER_TO_EMAIL && process.env.ORDER_FROM_EMAIL && process.env.RESEND_API_KEY);
 
-  if (process.env.ORDER_TO_EMAIL && process.env.ORDER_FROM_EMAIL && process.env.RESEND_API_KEY) {
+  if (hasEmailConfig) {
     const text = [
       `New pickle mission: ${reference}`,
       "",
@@ -119,6 +120,10 @@ export async function submitOrderRequest(order: OrderRequest): Promise<OrderSubm
       message: "Your pickle mission has been received! An adult will review it and follow up.",
       reference
     };
+  }
+
+  if (process.env.VERCEL || process.env.NODE_ENV === "production") {
+    throw new Error("Order email is not configured for production.");
   }
 
   const ordersDir = join(process.cwd(), "data", "orders");

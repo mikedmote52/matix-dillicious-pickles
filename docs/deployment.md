@@ -20,7 +20,7 @@ ORDER_FROM_EMAIL=<verified sender email>
 RESEND_API_KEY=<resend api key>
 ```
 
-V1 sends adult-managed order emails through Resend when all three variables are present. Without those credentials, local/dev mode writes request JSON files under `data/orders/` and the app says so honestly.
+V1 sends adult-managed order emails through Resend when all three variables are present. Without those credentials, local/dev mode writes request JSON files under `data/orders/`, but Vercel/production submissions fail honestly until email is configured.
 
 ## Launch Verification
 

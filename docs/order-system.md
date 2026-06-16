@@ -46,13 +46,15 @@ When all three variables are present, the route sends the adult-managed order em
 
 ## Development Fallback
 
-When `ORDER_TO_EMAIL` is not set, the route writes request JSON files to:
+When `ORDER_TO_EMAIL`, `ORDER_FROM_EMAIL`, and `RESEND_API_KEY` are not set locally, the route writes request JSON files to:
 
 ```text
 data/orders/
 ```
 
 Those JSON files are ignored by Git.
+
+Production and Vercel do not use this file fallback. Public deployments must configure real email env vars or submissions return an honest configuration error.
 
 ## Public Copy Boundary
 
