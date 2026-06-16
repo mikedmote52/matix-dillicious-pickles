@@ -51,7 +51,7 @@ export function OrderMission() {
       setState({
         status: "error",
         errors: payload.errors ?? { form: "The pickle mission could not be sent." },
-        message: payload.message ?? "Please fix the highlighted fields."
+        message: payload.message ?? payload.errors?.form ?? "Please fix the highlighted fields."
       });
       return;
     }
@@ -169,4 +169,3 @@ function Field({
     </label>
   );
 }
-

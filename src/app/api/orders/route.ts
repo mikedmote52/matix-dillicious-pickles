@@ -29,6 +29,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         ok: false,
+        message: "The adult order email could not be sent. Please try again later.",
         errors: { form: "The adult order email could not be sent. Please try again later." }
       },
       { status: 502 }
