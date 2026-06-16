@@ -11,3 +11,4 @@ source-photos/
 tsconfig.tsbuildinfo
 *.log
 .DS_Store
+.vercel
