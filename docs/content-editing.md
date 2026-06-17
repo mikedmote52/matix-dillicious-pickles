@@ -41,6 +41,15 @@ Edit `academyLessons`. Each lesson needs:
 
 Use short, concrete examples a child can explain.
 
+## Edit Business Plan Cards
+
+Edit `businessPlan`. These cards fill the business-plan section with real HTML text instead of relying on generated image text. Each card needs:
+
+- `id`
+- `title`
+- `badge`
+- `points`
+
 ## Edit Badges
 
 Edit `badges`. Keep thresholds in ascending order so the achievement shelf reads naturally.
@@ -52,4 +61,3 @@ Edit `mascots` for names, roles, and quotes. Artwork is in:
 ```text
 src/components/illustrations/PickleMascots.tsx
 ```
-

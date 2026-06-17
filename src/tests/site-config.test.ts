@@ -29,3 +29,19 @@ test("includes Pickle Pup and business lesson mascots", () => {
   assert.ok(mascotNames.includes("Money Jar Jerry"));
 });
 
+test("includes a filled business plan with eight kid-readable sections", () => {
+  const sectionTitles = siteConfig.businessPlan.map((section) => section.title);
+
+  assert.deepEqual(sectionTitles, [
+    "My Business Idea",
+    "My Mission",
+    "My Product",
+    "My Customers",
+    "My Marketing Plan",
+    "My Plan To Grow",
+    "Money Plan",
+    "My Superpower"
+  ]);
+  assert.equal(siteConfig.businessPlan.length, 8);
+  assert.ok(siteConfig.businessPlan.every((section) => section.points.length >= 2));
+});

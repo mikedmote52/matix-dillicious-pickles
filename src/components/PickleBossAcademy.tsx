@@ -32,7 +32,36 @@ export function PickleBossAcademy() {
               className="h-full w-full object-cover"
             />
           </div>
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="rounded-[2rem] bg-white p-4 shadow-sm">
+            <div className="rounded-[1.5rem] bg-[#fffaf0] p-4">
+              <p className="text-center text-sm font-black uppercase tracking-[0.18em] text-green-700">Matix&apos;s Business Plan</p>
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                {siteConfig.businessPlan.map((section) => (
+                  <article key={section.id} className="rounded-2xl border-2 border-green-900/10 bg-white p-3">
+                    <div className="flex items-center gap-2">
+                      <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-[#d8f66d] text-sm font-black text-green-950">
+                        {section.badge}
+                      </span>
+                      <h3 className="text-base font-black leading-tight text-green-950">{section.title}</h3>
+                    </div>
+                    <ul className="mt-3 grid gap-1.5">
+                      {section.points.map((point) => (
+                        <li key={point} className="flex gap-2 text-sm font-bold leading-5 text-green-950/75">
+                          <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-[#5ea62d]" />
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </article>
+                ))}
+              </div>
+              <p className="mt-4 rounded-2xl bg-[#d8f66d] p-3 text-center text-sm font-black text-green-950">
+                Big dreams start small, even with a pickle.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {siteConfig.academyLessons.map((lesson) => (
               <article key={lesson.id} className="grid grid-cols-[88px_1fr] gap-4 rounded-3xl bg-white p-4 shadow-sm">
                 <MascotArt variant={mascotVariant[lesson.mascotId as keyof typeof mascotVariant]} className="w-22" />
@@ -43,7 +72,6 @@ export function PickleBossAcademy() {
                 </div>
               </article>
             ))}
-          </div>
         </div>
       </div>
     </section>

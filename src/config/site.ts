@@ -27,6 +27,13 @@ export type Badge = {
   description: string;
 };
 
+export type BusinessPlanSection = {
+  id: string;
+  title: string;
+  badge: string;
+  points: string[];
+};
+
 export const siteConfig = {
   brand: {
     name: "Matix's Dill-icious Pickles",
@@ -156,6 +163,56 @@ export const siteConfig = {
       example: "Dill-icious names, mascots, and labels make the jars memorable."
     }
   ] satisfies AcademyLesson[],
+  businessPlan: [
+    {
+      id: "idea",
+      title: "My Business Idea",
+      badge: "1",
+      points: ["Make homemade pickles from cucumbers I grow.", "Share the crunch with people who love tasty snacks."]
+    },
+    {
+      id: "mission",
+      title: "My Mission",
+      badge: "2",
+      points: ["Make super tasty pickles.", "Make people smile.", "Save up for awesome adventures."]
+    },
+    {
+      id: "product",
+      title: "My Product",
+      badge: "3",
+      points: ["Hand-picked cucumbers.", "Crunchy jars made with care.", "$6 per jar."]
+    },
+    {
+      id: "customers",
+      title: "My Customers",
+      badge: "4",
+      points: ["Neighbors.", "Friends and family.", "Teachers and local pickle fans."]
+    },
+    {
+      id: "marketing",
+      title: "My Marketing Plan",
+      badge: "5",
+      points: ["Make funny signs.", "Offer samples when an adult says it is okay.", "Tell the story from garden to jar."]
+    },
+    {
+      id: "growth",
+      title: "My Plan To Grow",
+      badge: "6",
+      points: ["Try garlic, spicy, sweet, and extra-crunch flavors.", "Sell at local events with adult help.", "Keep making the label cooler."]
+    },
+    {
+      id: "money",
+      title: "Money Plan",
+      badge: "7",
+      points: ["Sell jars for $6 each.", "Buy ingredients and jars.", "Save some profit and reinvest some profit."]
+    },
+    {
+      id: "superpower",
+      title: "My Superpower",
+      badge: "8",
+      points: ["I work hard.", "I do not give up.", "I believe in my pickles."]
+    }
+  ] satisfies BusinessPlanSection[],
   badges: [
     {
       id: "first-sale",
@@ -197,4 +254,3 @@ export const siteConfig = {
 } as const;
 
 export type SiteConfig = typeof siteConfig;
-
