@@ -15,6 +15,6 @@ Generated public artwork:
 
 - `matix-pickle-crew-hero.jpg`: wide hero illustration with Matix, Pickle Pup, pickle mascots, jars, and cucumber garden.
 - `matix-founder-card.jpg`: portrait card of Matix holding a jar.
-- `pickle-business-plan-board.jpg`: blank-panel business plan board used beside Pickle Boss Academy lessons.
+- `pickle-business-plan-board.jpg`: blank-panel business plan board retained as reference only. The live business-plan section uses real HTML text so it never appears empty on mobile.
 
 The generated images intentionally avoid readable text so site copy remains editable, accessible, and accurate in HTML.
